@@ -1,12 +1,9 @@
 class Solution {
 public:
     string restoreString(string s, vector<int>& indices) {
-        string ans;
-        for (int i = 0; i < indices.size(); i++) {
-            for (int k = 0; k < indices.size(); k++) {
-                if (indices[k] == i)
-                    ans += s[k];
-            }
+        string ans = s;
+        for (int i = 0; i < s.size(); i++) {
+            ans[indices[i]] = s[i];
         }
         return ans;
     }
