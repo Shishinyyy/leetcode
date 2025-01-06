@@ -1,7 +1,6 @@
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        sort(strs.begin(), strs.end());
         int n = strs[0].size();
         string ans = \\;
         for (int i = 0; i < n; i++) {
